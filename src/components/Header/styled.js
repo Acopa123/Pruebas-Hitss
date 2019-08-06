@@ -3,6 +3,9 @@ import styled from 'styled-components';
 const Container = styled.header`
   background-color: #000;
   padding: 10px;
+`;
+
+const Head = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -10,7 +13,10 @@ const Container = styled.header`
 `;
 
 const DivSearch = styled.div`
-  min-width: 410px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 350px;
   max-width: 550px;
 `;
 
@@ -24,9 +30,43 @@ const Logo = styled.img`
   cursor: pointer;
 `;
 
-const Text = styled.h1`
-  font-size: 12px;
-  color: red;
+const Nav = styled.nav`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 `;
 
-export {Container, DivSearch, Anchor, Logo, Text}
+const Ul = styled.ul`
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+`;
+
+const Li = styled.li`
+  color: #fff;
+  margin: 10px 10px 10px 15px;
+  padding: 15px 0px 10px 0px;
+  text-decoration: none;
+  border-bottom: 2px solid #000;
+  :hover{
+    transition: 1s;
+    border-bottom: 2px solid #bdc3c7;
+  }
+`;
+
+const A = styled.a`
+  text-decoration: none;
+  color: #fff;
+  margin: 10px 10px 10px 15px;
+  padding-bottom: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  :hover{
+    transition: 1s;
+    color: #bdc3c7;
+  }
+`;
+
+export {Container, Head, DivSearch, Anchor, Logo, Nav, Ul, Li, A}

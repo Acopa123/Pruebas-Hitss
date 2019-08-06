@@ -14,7 +14,7 @@ const Input = styled.input`
   color: #fff;
   background-color: #333;
   border: 1px solid #555;
-  padding: .6em 2.5em .6em .75em;
+  padding: .85em 2.5em .85em .75em;
   outline: 0;
 `;
 

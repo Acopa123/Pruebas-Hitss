@@ -3,10 +3,9 @@ import {Input} from './styled';
 
 const Search = () => {
   return (
-    <div>
+    <form>
       <Input name="search" type="text" placeholder="Buscar"/>
-      <span>Jose Acopa</span>
-    </div>
+    </form>
   );
 }
 

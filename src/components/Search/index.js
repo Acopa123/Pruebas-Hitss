@@ -4,9 +4,10 @@ import {Input} from './styled';
 const Search = () => {
   return (
     <div>
-      <Input type="text" placeholder="Buscar"/>
+      <Input name="search" type="text" placeholder="Buscar"/>
+      <span>Jose Acopa</span>
     </div>
   );
 }
 
-export default Input;
+export default Search;

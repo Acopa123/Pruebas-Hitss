@@ -16,7 +16,7 @@ const DivSearch = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  min-width: 350px;
+  min-width: 450px;
   max-width: 550px;
 `;
 

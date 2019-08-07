@@ -5,16 +5,16 @@ import Button from '../Button';
 const Card = (props) => {
   return (
     <Container>
-      <Img src="https://clarovideocdn5.clarovideo.net/PELICULAS/RAINFALL/EXPORTACION_WEB/SS/RAINFALLWHORIZONTAL.jpg?size=675x380"/>
+      <Img src={props.image}/>
       <Content>
-        <Title>Titulo</Title>
+        <Title>{props.title}</Title>
         <Description>
-          <Span fontWeight="true">Sinopsis</Span> Una niña parte en una aventura para encontrar una estrella y salvar la Navidad.
+          <Span fontWeight="true">Sinopsis</Span> {props.description}
         </Description>
         <Data>
-          <Span>2014</Span>
-          <Span>01:00:27</Span>
-          <Span fontWeight="true">G</Span>
+          <Span>{props.year}</Span>
+          <Span>{props.duration}</Span>
+          <Span fontWeight="true">{props.rating_code}</Span>
         </Data>
         <Info>
           <Button text="Ver detalles"/>

@@ -4,12 +4,14 @@ const Container = styled.div`
   margin: 10px;
   border-radius: 5px;
   position: relative;
+  width: 490px;
+  height: 275px;
 `;
 
 const Img = styled.img`
   position: absolute;
-  width: 448px;
-  height: 251px;
+  width: 100%;
+  height: 100%;
   border-radius: 5px;
   z-index: 1;
   :hover {
@@ -20,8 +22,8 @@ const Img = styled.img`
 const Content = styled.a`
   border-radius: 5px;
   position: absolute;
-  width: 428px;
-  height: 231px;
+  width: 96%;
+  height: 93%;
   cursor: pointer;
   padding: 10px;
   :hover {
@@ -37,9 +39,9 @@ const Data = styled.div`
   justify-content: space-between;
 `;
 
-
 const Title = styled.h1`
   color: #fff;
+  font-size: 20px;
 `;
 
 const Description = styled.p`

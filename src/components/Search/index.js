@@ -5,6 +5,7 @@ function request(event, props){
   event.preventDefault()
   let value = event.target[0].value
   props.history.push(`/busqueda/${value}`)
+  window.location.reload()
 }
 
 const Search = (props) => {

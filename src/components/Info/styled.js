@@ -8,16 +8,26 @@ const Container = styled.div`
   justify-content: space-around;
   align-items: end;
   flex-direction: row;
+  @media only screen and (max-width: 990px) {
+    flex-direction: column;
+  }
 `;
 
 const Img = styled.img`
   border-radius: 5px;
   width: 575px;
   height: 320px;
+  @media only screen and (max-width: 634px) {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 const Data = styled.div`
   padding: 0px 60px 0px 60px;
+  @media only screen and (max-width: 634px) {
+    width: 80%;
+  }
 `;
 
 const Title = styled.h1`

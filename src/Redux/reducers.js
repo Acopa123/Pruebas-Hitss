@@ -1,8 +1,9 @@
-import { GET_MOVIES, GET_MOVIE } from './actions'
+import { GET_MOVIES, GET_MOVIE, SEARCH } from './actions'
 
 const initialState = {
   movies: {},
-  movie: {}
+  movie: {},
+  search: {}
 };
 
 function homeReducer(state = initialState, action){
@@ -13,6 +14,8 @@ function homeReducer(state = initialState, action){
     case GET_MOVIE:
       state.movie = action.movie;
       return {...state}
+    case SEARCH:
+      console.log('reducer', action);
     default:
       return state;
   }

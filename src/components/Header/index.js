@@ -3,13 +3,13 @@ import Search from '../Search';
 import Button from '../Button';
 import { Container, Head, DivSearch, Anchor, Logo, Nav, Ul, Li, A } from './styled';
 
-const Header = () => {
+const Header = (props) => {
   return (
     <Container>
       <Head>
         <Anchor href="#"><Logo src="https://www.clarovideo.com/webclient/sk_core/images/clarovideo-logo-sitio.svg"/></Anchor>
         <DivSearch>
-          <Search/>
+          <Search history={props.history}/>
           <Button text="Ingresar"/>
           <Button text="Regístrate"/>
         </DivSearch>

@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { getMovie } from '../../Redux/actions';
 import { Container } from './styled';
+import Info from '../../components/Info';
 
 class VCard extends React.Component {
 
@@ -17,11 +18,22 @@ class VCard extends React.Component {
   }
 
   render() {
-    let movie = this.props.movie.response && this.props.movie.response.group
+    let movie = this.props.movie.response ? this.props.movie.response.group : ''
+    let genres = movie.common != undefined && movie.common.extendedcommon.genres.genre.map((item) => item.desc)
 
     return (
       <Container>
-        <h1>test</h1>
+        <Info
+          image={movie.common != undefined && movie.common.image_large}
+          imageBackground={movie.common != undefined && movie.common.image_background}
+          title={movie.common != undefined && movie.common.title}
+          description={movie.common != undefined && movie.common.large_description}
+          duration={movie.common != undefined && movie.common.duration}
+          originalTitle={movie.common != undefined && movie.common.extendedcommon.media.originaltitle}
+          year={movie.common != undefined && movie.common.extendedcommon.media.publishyear}
+          rating={movie.common != undefined && movie.common.extendedcommon.media.rating.code}
+          genres={genres && genres.join().replace(/,/gi, ', ')}
+        />
       </Container>
     );
   }

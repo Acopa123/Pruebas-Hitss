@@ -1,10 +1,7 @@
 import styled from 'styled-components';
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  color: red;
+  padding: 40px;
 `;
 
 export {Container}

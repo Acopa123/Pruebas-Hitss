@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
 
 const Container = styled.header`
   background-color: #000;
@@ -56,7 +57,7 @@ const Li = styled.li`
   }
 `;
 
-const A = styled.a`
+const A = styled(Link)`
   text-decoration: none;
   color: #fff;
   margin: 10px 10px 10px 15px;

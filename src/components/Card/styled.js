@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   margin: 10px;
@@ -19,13 +20,14 @@ const Img = styled.img`
   }
 `;
 
-const Content = styled.a`
+const Content = styled(Link)`
   border-radius: 5px;
   position: absolute;
   width: 96%;
   height: 93%;
   cursor: pointer;
   padding: 10px;
+  text-decoration: none;
   :hover {
     z-index: 2;
     transition: .3s;

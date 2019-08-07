@@ -6,7 +6,7 @@ const Card = (props) => {
   return (
     <Container>
       <Img src={props.image}/>
-      <Content>
+      <Content to={`/${props.slug}/${props.id}`}>
         <Title>{props.title}</Title>
         <Description>
           <Span fontWeight="true">Sinopsis</Span> {props.description}

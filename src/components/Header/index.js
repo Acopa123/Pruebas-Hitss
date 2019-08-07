@@ -1,7 +1,7 @@
 import React from 'react';
 import Search from '../Search';
 import Button from '../Button';
-import {Container, Head, DivSearch, Anchor, Logo, Nav, Ul, Li, A} from './styled';
+import { Container, Head, DivSearch, Anchor, Logo, Nav, Ul, Li, A } from './styled';
 
 const Header = () => {
   return (
@@ -17,7 +17,7 @@ const Header = () => {
       <Nav>
         <Ul>
           <Li>
-            <A href="#">Inicio</A>
+            <A to={'/'}>Inicio</A>
           </Li>
           <Li>
             <A href="#">Catálogo</A>

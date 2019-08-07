@@ -19,6 +19,9 @@ const DivSearch = styled.div`
   justify-content: space-between;
   min-width: 450px;
   max-width: 550px;
+  @media only screen and (max-width: 700px) {
+    display: none;
+  }
 `;
 
 const Anchor = styled.a`
@@ -35,6 +38,10 @@ const Nav = styled.nav`
   display: flex;
   flex-direction: row;
   width: 100%;
+
+  @media only screen and (max-width: 640px) {
+    display: none;
+  }
 `;
 
 const Ul = styled.ul`
@@ -70,4 +77,15 @@ const A = styled(Link)`
   }
 `;
 
-export {Container, Head, DivSearch, Anchor, Logo, Nav, Ul, Li, A}
+const Menu = styled.h1`
+  color: #fff;
+  display: none;
+  font-size: 18px;
+  text-decoration: underline;
+  cursor: pointer;
+  @media only screen and (max-width: 640px) {
+    display: block;
+  }
+`;
+
+export {Container, Head, DivSearch, Anchor, Logo, Nav, Ul, Li, A, Menu}

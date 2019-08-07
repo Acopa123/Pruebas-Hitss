@@ -1,7 +1,7 @@
 import React from 'react';
 import Search from '../Search';
 import Button from '../Button';
-import { Container, Head, DivSearch, Anchor, Logo, Nav, Ul, Li, A } from './styled';
+import { Container, Head, DivSearch, Anchor, Logo, Nav, Ul, Li, A, Menu } from './styled';
 
 const Header = (props) => {
   return (
@@ -13,6 +13,7 @@ const Header = (props) => {
           <Button text="Ingresar"/>
           <Button text="Regístrate"/>
         </DivSearch>
+        <Menu>Menu</Menu>
       </Head>
       <Nav>
         <Ul>

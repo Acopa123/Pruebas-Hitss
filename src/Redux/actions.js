@@ -1,6 +1,6 @@
 export const GET_MOVIES = 'GET_MOVIES'
 export const GET_MOVIE = 'GET_MOVIE'
-export const SEARCH = 'SEARCH'
+export const FILTER = 'FILTER'
 
 export function getMovies(movies) {
   return { type: 'GET_MOVIES', movies }
@@ -10,6 +10,6 @@ export function getMovie(movie) {
   return { type: 'GET_MOVIE', movie }
 }
 
-export function search(text, json) {
-  return { type: 'SEARCH', text, json }
+export function filterMovies(movies) {
+  return { type: 'FILTER', movies }
 }

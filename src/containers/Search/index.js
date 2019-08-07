@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Container } from './styled';
-import { search } from '../../Redux/actions';
+import Card from '../../components/Card';
+import { filterMovies } from '../../Redux/actions';
 
 class Search extends React.Component {
   componentDidMount(){
@@ -10,14 +11,36 @@ class Search extends React.Component {
      return res.json()
    })
    .then((json) => {
-     this.props.search(this.props.match.params.text, json)
+     let movies = json.response.groups
+     let filterMovies = movies.filter(movie => movie.title.includes(this.props.match.params.text));
+
+     this.props.filterMovies(filterMovies)
    })
  }
 
   render() {
+    let movies = this.props.filter
+    console.log(movies);
+
     return (
       <Container>
-        search
+        {
+          movies.map((movie, i) => {
+            return (
+              <Card
+                key={i}
+                id={movie.id}
+                slug={movie.title_uri}
+                image={movie.image_large}
+                title={movie.title}
+                description={movie.description_large}
+                year={movie.year}
+                duration={movie.duration}
+                rating_code={movie.rating_code}
+              />
+            )
+          })
+        }
       </Container>
     );
   }
@@ -29,8 +52,8 @@ const mapStateToProps = (state)=>{
 
 function mapDispatchToProps(dispatch) {
   return {
-    search: (type, json) => {
-      dispatch(search(type, json))
+    filterMovies: (type) => {
+      dispatch(filterMovies(type))
     },
     dispatch,
   };

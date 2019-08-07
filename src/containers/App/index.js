@@ -11,14 +11,14 @@ import homeReducer from '../../Redux/reducers'
 let store = createStore(homeReducer)
 const history = createBrowserHistory()
 
-const App = (props) => (
+const App = () => (
   <Provider store={store}>
     <Router>
       <div>
         <Header history={history}/>
         <Route exact path="/" component={Home}/>
-        <Route path="/:slug/:id" component={VCard}/>
-        <Route path="/:text" component={Search}/>
+        <Route path="/pelicula/:slug/:id" component={VCard}/>
+        <Route exact path="/busqueda/:text" component={Search}/>
       </div>
     </Router>
   </Provider>

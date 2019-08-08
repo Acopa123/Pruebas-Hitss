@@ -17,3 +17,12 @@ Una vez instalado ejecutamos el comando:
 ```bash
 $ npm start
 ```
+
+## Pruebas Unitarias
+
+Ejecutar comando
+
+```bash
+$ npm test
+```
+** Nota: En la carpeta coverage abrir el index en una pestaña del navegador para visualizar las pruebas en una tabla **
